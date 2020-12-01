@@ -1,5 +1,5 @@
 # discord-status-changer
 changes your discord status periodically
 # usage
-put your token in the token.json file
-recommended delay: 1.5
+put your token in the token.json file 
+recommended delay: 1.5 

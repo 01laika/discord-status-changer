@@ -5,7 +5,7 @@ import json
 url = "https://discord.com/api/v8/users/@me/settings"
 
 try:
-    delay = int(input("delay per each time changed? =>\t"))
+    delay = float(input("delay per each time changed? =>\t"))
 except ValueError:
     print("put a number in lol")
 else:

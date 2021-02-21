@@ -26,8 +26,8 @@ else:
         else:
 
             status = [ #put whatever you want to change your status to in-between the quotation marks
-            "example",
-            "example 1",
+            "",
+            "",
             "",
             ""
             ]

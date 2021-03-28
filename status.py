@@ -25,13 +25,6 @@ else:
             print("invalid token!")
         else:
 
-            status = [ #put whatever you want to change your status to in-between the quotation marks
-            "",
-            "",
-            "",
-            ""
-            ]
-
             headers = {
                 'Authorization': token,
                 'Content-Type': 'application/json'
@@ -40,13 +33,13 @@ else:
             def main():
                 print("{+} Changing Status! {+}")
                 while True:
-                    for each in status:
-                        status_data = ({'custom_status': {'text': each}})
-                        requests.patch(url, headers=headers, json=status_data)
-                        time.sleep(delay)
+                    with open("status.txt", "r") as s:
+                        for stat in s:
+                            status = stat.strip()
+                            status_data = ({'custom_status': {'text': status}})
+                            requests.patch(url, headers=headers, json=status_data)
+                            time.sleep(delay)
 
 
             if __name__== "__main__": 
-                main() 
-
-
+                main()
